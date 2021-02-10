@@ -101,13 +101,82 @@ let ctx  = canvas.getContext('2d')
 //     ctx.fill()
 // }
 
-let stepCount = 0 // equity step in one direction
-let direction 
 
-function drawBot() {
-    ctx.clearReact(0,0,400,200)
-   if (stepCount === 0 ){
-       stepCount = Math.floor(15*Math.random())
-       direction = Math.floor(8*Math.random())
-   }
-}
+//***** animated Background start 
+// let stepCount = 0 // equity step in one direction
+// let direction 
+// let x = 200
+// let y = 100
+// let timer  
+// let myX
+// let myY
+
+// function drawDot() {
+//     ctx.clearRect(0,0,400,200)
+//    if (stepCount === 0 ){
+//        stepCount = Math.floor(15*Math.random())
+//        direction = Math.floor(8*Math.random())
+//    }
+//    else {
+//         stepCount--
+//    }
+//    switch(direction) {
+//        case 0:
+//            //up direction
+//             y = y-1
+//              break;
+//            case 1:
+//                //right direction
+//             x = x+1
+//             break;
+//            case 2:
+//                //down direction
+//             y = y+1
+//             break;
+//            case 3:
+//                //left direction
+//             x = x-1
+//             break;
+//            case 4:
+//                //right up direction
+//             x = x+1
+//             y = y-1
+//             break;
+//            case 5:
+//                //right down direction
+//             x = x+1
+//             y = y+1
+//             break;
+//            case 6:
+//                //left down direction
+//             x = x-1
+//             y = y+1
+//             break;
+//            case 7:
+//                //left up direction
+//             x = x-1
+//             y = y-1
+//             break;
+//            default:
+//             break;
+
+//    }
+//    if(x<0 || x>400 || y<0 || y>200) {
+//        stepCount = 0
+//    }
+//    ctx.fillRect(x-3,y-3,6,6)
+//    ctx.beginPath()
+//    ctx.moveTo(x,y)
+//    ctx.lineTo(myX,myY)
+//    ctx.stroke()
+//    timer =setTimeout(drawDot,100)
+// }
+// drawDot()
+// canvas.onmousemove = function (event) {
+//     myX = event.offsetX
+//     myY = event.offsetY
+// }
+
+//***** animated Background end 
+
+
