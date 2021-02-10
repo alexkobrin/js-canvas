@@ -9,10 +9,38 @@
     <title>Canvas</title>
 </head>
 <body>
-    <canvas id="c1" width="400"
-    height="200"></canvas>
-    <!-- <input type="color"  id="color"> -->
+    <div class="wrapper">
+  <div class="canvas">
+         <h2>Draw shapes by changing data</h2>
+    <canvas id="c1" width="600"
+    height="600"></canvas></div>
    
+    <div class="handle">
+        <h3>Try change data</h3>
+        <div class="ExtRadius">
+            <label for="volume">Change Radius (R)</label>
+            <input type="range" id="ExtRadius" name="radius" 
+                   min="0" max="200">
+                   <span class="valR" > Value</span>
+          </div>
+        <div class="IntRadius">
+            <label for="volume">Change Radius (r)</label>
+            <input type="range" id="IntRadius" name="radius"
+                   min="0" max="200">
+            <span class="valr">Value</span>
+        </div>
+        <div class="diametr">
+            <label for="volume">Change diametr (d)</label>
+            <input type="range" id="diametr" name="radius"
+                   min="0" max="200">
+            <span class="diam">Value</span>
+        </div>
+        <button class="btn">Apply change</button>
+    </div>
+
+
+    </div>
+  
     <script src="script.js"></script>
 </body>
 </html>

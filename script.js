@@ -179,4 +179,74 @@ let ctx  = canvas.getContext('2d')
 
 //***** animated Background end 
 
+//******----------- */  grafic start
 
+// let x =0;
+// let timer 
+
+
+// function drawSin() {
+//     y = Math.sin(x)
+//     if (x>=400) {
+//         x=0
+//     } else {
+//         x=x+0.01
+//     }
+//     x = x + 0.1
+//     ctx.fillRect(5*x,100+ 20*y,3,3)
+//     timer = setTimeout(drawSin , 50)
+// }
+
+// drawSin()
+//******----------- */  grafic end
+
+
+
+//******----------- */   start drawn spirograf
+let Rad = document.querySelector('#ExtRadius') 
+let rad = document.querySelector('#IntRadius') 
+let dim = document.querySelector('#diametr')
+let btn = document.querySelector('.btn')
+ let valR =document.querySelector('.valR') 
+ let valr =document.querySelector('.valr')
+ let diam =document.querySelector('.diam')
+   
+   
+ valR.textContent = Rad.value 
+ valr.textContent = rad.value 
+ diam.textContent = dim.value
+
+Rad.addEventListener('input',(e) => valR.textContent = e.target.value );
+rad.addEventListener('input', (e) => valr.textContent = e.target.value )
+dim.addEventListener('input',(e) => diam.textContent = e.target.value);
+
+ let  R =200
+ let  r = 140
+ let  d= 68
+ let teta = 0
+ let timer 
+ 
+ function spiro() {
+     let x= (R-r)* Math.cos(teta) + d*Math.cos( (R-r)*teta/r )
+     let y=(R-r)* Math.sin(teta) - d*Math.sin( (R-r)*teta/r )
+     teta = teta + 0.1
+     ctx.fillRect( 300+x, 300+y,4,4)
+     timer= setTimeout(spiro,50)
+    } 
+    console.log(R,r,d); 
+
+    btn.addEventListener('click', update)
+    function update() {  
+        ctx.clearRect(0,0,600,600)
+            R = Rad.value
+            r = rad.value
+            d =  dim.value       
+    }
+
+    spiro()
+
+
+
+
+
+//******----------- */   start drawn spirograf
