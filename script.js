@@ -231,7 +231,7 @@ dim.addEventListener('input',(e) => diam.textContent = e.target.value);
      let y=(R-r)* Math.sin(teta) - d*Math.sin( (R-r)*teta/r )
      teta = teta + 0.1
      ctx.fillRect( 300+x, 300+y,4,4)
-     timer= setTimeout(spiro,50)
+     timer= setTimeout(spiro,30)
     } 
     console.log(R,r,d); 
 
